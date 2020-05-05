@@ -1,0 +1,21 @@
+{{>header}}
+
+<!-- Profile part -->
+<div class="container home wrapper  my-md-5 pl-md-5">
+    <div class="profile home-text col-md-6 text-center col-lg">
+        <img class="profile-img" src="./images/user.png" />
+        <div class="profile-info">
+            <p>Username: <small>{{username}}</small></p>
+            <p class="infoType">Has {{count}} ideas =)</p>
+            {{#if hasNoWishes}}
+            <p>No ideas yet</p>
+            {{else}}
+            {{#each createdIdeas}}
+            <p>{{this}}</p>
+            {{/each}}
+            {{/if}}
+        </div>
+    </div>
+</div>
+
+{{>footer}}
